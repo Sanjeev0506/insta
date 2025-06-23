@@ -1,3 +1,4 @@
 streamlit
 litellm
 requests
+python-dotenv

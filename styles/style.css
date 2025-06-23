@@ -1,72 +1,62 @@
 body {
-    background-color: #f9fafb;
-    color: #111827;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1, h2, h3, h4, h5 {
-    color: #111827;
-    font-weight: 600;
-    margin-bottom: 10px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
 }
 
 .stButton > button {
-    background-color: #4f46e5;
-    color: #ffffff;
-    border: none;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .stButton > button:hover {
-    background-color: #4338ca;
+    background-color: #00ff00;
+    color: #000000;
     cursor: pointer;
 }
 
 .stRadio > div {
-    background-color: #ffffff;
-    border: 1px solid #d1d5db;
-    color: #111827;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-    border-radius: 6px;
-    padding: 10px;
+    background-color: #0d0d0d;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.stTextInput > div > input,
-.stTextArea > div > textarea {
-    background-color: #ffffff;
-    color: #111827;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    padding: 8px;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+.stTextInput > div > input, .stTextArea > div > textarea {
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .stMarkdown {
-    background-color: #ffffff;
-    color: #111827;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
     padding: 10px;
-    margin-bottom: 15px;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .instagram-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #111827;
-    font-size: 24px;
-    font-weight: 600;
-    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-    margin-bottom: 20px;
+    color: #00ff00;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .instagram-header img {
-    width: 28px;
-    height: 28px;
+    filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(7477%) hue-rotate(84deg) brightness(102%) contrast(108%);
+    width: 30px;
+    height: 30px;
 }
