@@ -1,0 +1,62 @@
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.stButton > button {
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.stButton > button:hover {
+    background-color: #00ff00;
+    color: #000000;
+    cursor: pointer;
+}
+
+.stRadio > div {
+    background-color: #0d0d0d;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.stTextInput > div > input, .stTextArea > div > textarea {
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.stMarkdown {
+    background-color: #000000;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.instagram-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #00ff00;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.instagram-header img {
+    filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(7477%) hue-rotate(84deg) brightness(102%) contrast(108%);
+    width: 30px;
+    height: 30px;
+}
