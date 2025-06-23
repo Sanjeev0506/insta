@@ -1,10 +1,19 @@
 from litellm import completion
-import streamlit as st  # ✅ Needed for st.secrets
+import os
+import streamlit as st
+from dotenv import load_dotenv
 
-MODEL = st.secrets["TOGETHER_MODEL"]
-API_KEY = st.secrets["TOGETHER_AI_API_KEY"]
+# Load .env for local development
+load_dotenv()
+
+# Fetch model and API key with fallback logic:
+MODEL = st.secrets.get("TOGETHER_MODEL") or os.getenv("TOGETHER_MODEL")
+API_KEY = st.secrets.get("TOGETHER_AI_API_KEY") or os.getenv("TOGETHER_AI_API_KEY")
 
 def get_bios_with_together(prompt):
+    if not MODEL or not API_KEY:
+        raise ValueError("MODEL or API_KEY not set. Please check your environment variables or Streamlit Secrets.")
+
     response = completion(
         model=MODEL,
         messages=[{"role": "user", "content": prompt}],
