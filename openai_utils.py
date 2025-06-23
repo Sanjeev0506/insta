@@ -1,15 +1,8 @@
 from litellm import completion
-from dotenv import load_dotenv
-import os
+import streamlit as st  # ✅ Needed for st.secrets
 
-load_dotenv()
-
-MODEL = os.getenv("TOGETHER_MODEL")
-API_KEY = os.getenv("TOGETHER_AI_API_KEY")
-
-# Debug print to verify
-print(f"Loaded MODEL: {MODEL}")
-print(f"Loaded API KEY: {API_KEY[:4]}...")  # Don't print full key for security
+MODEL = st.secrets["TOGETHER_MODEL"]
+API_KEY = st.secrets["TOGETHER_AI_API_KEY"]
 
 def get_bios_with_together(prompt):
     response = completion(
