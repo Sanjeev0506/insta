@@ -1,31 +1,27 @@
-# app.py
-
+# ✅ Imports
 import streamlit as st
 from prompt_template import build_prompt
 from openai_utils import get_bios_with_together as get_bios_from_openai
 import os
 
-# Page Config - MUST be the first Streamlit command
-st.set_page_config(page_title="InstaBio Generator", layout="centered")
+# ✅ Streamlit page config
+st.set_page_config(page_title="Instagram Bio Generator", layout="centered")
 
-# Load Custom CSS
-with open("styles/style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+# ✅ Load custom CSS (Professional Style)
+css_path = "style.css"
+with open(css_path) as f:
+    css_content = f.read()
+    st.markdown(f"<style>{css_content}</style>", unsafe_allow_html=True)
 
-# Custom Header with Instagram logo
-st.markdown(
-    """
-    <h1 style='text-align: center;'>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="30" style="vertical-align: middle; margin-right: 10px;">
-        <span style="color: #e50914;">InstaBio Generator</span>
-    </h1>
-    """,
-    unsafe_allow_html=True
-)
+# ✅ Header Section
+st.markdown("""
+<div class="instagram-header">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo">
+    <span>Instagram Bio Generator</span>
+</div>
+""", unsafe_allow_html=True)
 
-st.markdown("Generate unique Instagram bios based on your keywords and vibe. Powered by Together.ai")
-
-# User Inputs
+# ✅ Input Section
 keywords = st.text_input("Enter keywords (comma-separated)", placeholder="e.g., travel, coffee, books")
 
 tone = st.radio("Choose a vibe or tone", [
@@ -35,7 +31,7 @@ tone = st.radio("Choose a vibe or tone", [
 
 bio_length = st.slider("Bio length (characters)", 20, 150, 100)
 
-# Generate Button
+# ✅ Generate Button
 if st.button("🚀 Generate Bio"):
     if not keywords.strip():
         st.warning("Please enter at least one keyword.")
@@ -51,4 +47,3 @@ if st.button("🚀 Generate Bio"):
                     st.code(bio, language="markdown")
             except Exception as e:
                 st.error(f"Error: {e}")
-# Streamlit app placeholder
