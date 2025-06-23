@@ -16,7 +16,7 @@ with open(css_path) as f:
 # ✅ Header Section
 st.markdown("""
 <div class="instagram-header">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram Logo" width="20" height="20">
     <span>Instagram Bio Generator</span>
 </div>
 """, unsafe_allow_html=True)
