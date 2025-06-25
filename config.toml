@@ -1,6 +1,6 @@
 [theme]
-primaryColor="#4f46e5"  # Soft, modern blue (adjustable)
-backgroundColor="#f9fafb"
-secondaryBackgroundColor="#ffffff"
-textColor="#111827"
-font="sans serif"
+primaryColor = "#4f46e5"              # Modern blue for buttons/accents
+backgroundColor = "#f9fafb"           # Light subtle background
+secondaryBackgroundColor = "#ffffff"  # White cards for inputs
+textColor = "#111827"                 # Deep grey for readability
+font = "sans serif"
